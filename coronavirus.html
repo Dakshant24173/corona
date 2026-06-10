@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coronavirus - COVID-19</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+  
+    nav {
+      background-color: #1a73e8;
+      padding: 14px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .logo {
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .banner {
+      background-color: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 40px;
+    }
+    .banner h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .banner p {
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .card h2 {
+      font-size: 1.4rem;
+      color: #1a73e8;
+      margin-bottom: 14px;
+      border-left: 4px solid #1a73e8;
+      padding-left: 12px;
+    }
+    .card p {
+      font-size: 0.97rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .symptom-item {
+      background: #f0f4f8;
+      border-left: 3px solid #1a73e8;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 0.92rem;
+      color: #333;
+    }
+
+    .prevention-list {
+      list-style: none;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .prevention-list li {
+      background: #f0f4f8;
+      padding: 11px 16px;
+      border-radius: 6px;
+      font-size: 0.93rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .prevention-list li::before {
+      content: "✔";
+      color: #1a73e8;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .spread-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .spread-box {
+      background: #eaf1fb;
+      border-radius: 8px;
+      padding: 18px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+    }
+    .spread-box .emoji {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .spread-box strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #1a73e8;
+    }
+
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #f0a500;
+      border-radius: 6px;
+      padding: 16px 18px;
+      margin-top: 20px;
+      font-size: 0.92rem;
+      color: #555;
+    }
+    .warning strong { color: #c07000; }
+
+    footer {
+      background-color: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.88rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="logo">COVID-19</span>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#symptoms">Symptoms</a></li>
+    <li><a href="#spread">How it Spreads</a></li>
+    <li><a href="#prevention">Prevention</a></li>
+  </ul>
+</nav>
+
+<div class="banner">
+  <h1>Coronavirus (COVID-19)</h1>
+  <p>Stay informed. Stay safe. Learn about the disease, its symptoms, and how to protect yourself and others.</p>
+</div>
+
+<div class="container">
+
+  <div class="card" id="about">
+    <h2>What is Coronavirus?</h2>
+    <p>
+      Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
+      Most people infected will experience mild to moderate respiratory illness and recover without
+      requiring special treatment. However, older people and those with underlying conditions such as
+      heart disease, diabetes, or cancer are more likely to develop serious illness.
+    </p>
+  </div>
+
+  <div class="card" id="symptoms">
+    <h2>Symptoms</h2>
+    <p>COVID-19 affects people differently. Symptoms usually appear 2–14 days after exposure.</p>
+    <div class="symptom-grid">
+      <div class="symptom-item">🌡️ Fever or chills</div>
+      <div class="symptom-item">😴 Fatigue or tiredness</div>
+      <div class="symptom-item">🤧 Dry cough</div>
+      <div class="symptom-item">💨 Shortness of breath</div>
+      <div class="symptom-item">👃 Loss of smell or taste</div>
+      <div class="symptom-item">🦴 Body aches and pains</div>
+      <div class="symptom-item">🤒 Sore throat</div>
+      <div class="symptom-item">🤢 Nausea or diarrhoea (rare)</div>
+    </div>
+    <div class="warning">
+      <strong>⚠️ Seek medical help immediately</strong> if you have difficulty breathing,
+      chest pain, or confusion. These can be signs of severe illness.
+    </div>
+  </div>
+
+  <div class="card" id="spread">
+    <h2>How COVID-19 Spreads</h2>
+    <p>The virus spreads mainly through contact with an infected person. Here are the main ways:</p>
+    <div class="spread-grid">
+      <div class="spread-box">
+        <span class="emoji">💧</span>
+        <strong>Droplets</strong>
+        When an infected person coughs, sneezes, or talks, droplets carry the virus.
+      </div>
+      <div class="spread-box">
+        <span class="emoji">🌬️</span>
+        <strong>Airborne</strong>
+        Small particles can stay in the air in poorly ventilated indoor spaces.
+      </div>
+      <div class="spread-box">
+        <span class="emoji">🤝</span>
+        <strong>Close Contact</strong>
+        Being near an infected person increases your chances of breathing in the virus.
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="prevention">
+    <h2>How to Prevent COVID-19</h2>
+    <p>Simple everyday actions can significantly reduce the spread of the virus:</p>
+    <ul class="prevention-list">
+      <li>Wash your hands regularly with soap and water for at least 20 seconds.</li>
+      <li>Use an alcohol-based hand sanitiser when soap is not available.</li>
+      <li>Maintain at least 1 metre distance from people who are coughing or sneezing.</li>
+      <li>Avoid touching your eyes, nose, and mouth with unwashed hands.</li>
+      <li>Wear a mask properly in crowded or indoor places.</li>
+      <li>Stay home and isolate if you feel unwell or have symptoms.</li>
+      <li>Cover your mouth and nose with your elbow when you cough or sneeze.</li>
+      <li>Keep rooms well-ventilated by opening windows when possible.</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>Information based on WHO guidelines &nbsp;|&nbsp; COVID-19 Awareness Project</p>
+</footer>
+
+</body>
+</html>
